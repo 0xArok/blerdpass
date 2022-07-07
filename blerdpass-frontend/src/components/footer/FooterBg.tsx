@@ -11,16 +11,27 @@ import {Custom} from "../../styles/Theme";
 function Footer() {
 
     return (
-      <Box sx={{
-          height: '10vw',
-          overflow: "auto",
-          objectFit: 'cover',
-          backgroundColor: "#fff",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition:  "50% 50%"
-        }}
-      />
+        <Stack direction="column" justifyContent="center" height="100%"
+               alignItems="center" paddingY={3} spacing={3} sx={{background: '#0a070a'}} width={"100vw"} zIndex={10}>
+
+
+            <Stack direction={"row"} alignItems="center" justifyContent="center" spacing={3} paddingY={5}>
+                <a href={"https://twitter.com/kumaversenft"} target="_blank" rel="noreferrer">
+                    <Image src={twitter} alt="twitter" width={72} height={72}/>
+                </a>
+                <a href={"https://discord.gg/kumaverse"} target="_blank" rel="noreferrer">
+                    <Image src={discord} alt="discord" width={72} height={72}/>
+                </a>
+
+            </Stack>
+
+
+            <Typography textAlign={"center"} variant={"caption"} color={"white"}>
+
+                Copyright 2022 SAINT ROCK MEDIA<br/>
+            </Typography>
+
+        </Stack>
     )
 
 }
