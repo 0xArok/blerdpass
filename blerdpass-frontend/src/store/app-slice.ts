@@ -4,12 +4,11 @@ import {setAll} from "./utils/set-all";
 import {getAddresses} from "../web3/contractsAddresses";
 import {ethers} from "ethers";
 import {default as BatPocong} from '../abi/BatPocong.json';
-import {default as ERC20} from '../abi/ERC20.json';
+import {default as BlerdPass} from '../abi/ERC20.json';
 import {RootState} from "./store";
 import {toast} from "react-toastify";
 import {sleep} from "./utils/sleep";
 import {formatEther} from "ethers/lib/utils";
-import axios from "axios";
 
 
 export interface AppSlice {
@@ -17,10 +16,7 @@ export interface AppSlice {
     currentMinted: number,
     mintAmount: number,
     mintTotalPrice: number,
-    mintPrice: number,
-    showShare: boolean,
-    pendingTokens: string,
-    guanoBalance: string
+    mintPrice: number
 }
 
 const initialState: AppSlice = {
@@ -28,10 +24,7 @@ const initialState: AppSlice = {
     currentMinted: 0,
     mintAmount: 1,
     mintTotalPrice: 0,
-    mintPrice: 0,
-    showShare: false,
-    pendingTokens: "0.0",
-    guanoBalance: "0.0"
+    mintPrice: 0
 }
 
 export const loadApp = createAsyncThunk("app/init",
@@ -40,18 +33,13 @@ export const loadApp = createAsyncThunk("app/init",
         const contracts = getAddresses(params.networkID);
 
         let currentMinted = 0
-        let mintPrice = 0.03
-        let pendingTokens = 0
-        let guanoBalance = 0
+        let mintPrice = 0.0
 
         try {
-            const batPocongContract = new ethers.Contract(contracts.BAT_POCONG, BatPocong.abi, params.provider)
-            const guanoContract = new ethers.Contract(contracts.GUANO, ERC20.abi, params.provider)
-            pendingTokens = await guanoContract.getTotalClaimableTokens(params.address)
-            guanoBalance = await guanoContract.balanceOf(params.address)
+            const blerdPassContract = new ethers.Contract(contracts.BLERD_PASS, BlerdPass.abi, params.provider)
 
             //usdvAllowance = await usdvContract.allowance(params.address, vaderContract.address)
-            const minted = await batPocongContract.totalSupply()
+            const minted = await blerdPassContract.totalSupply()
             currentMinted = minted.toNumber()
 
 
@@ -66,9 +54,6 @@ export const loadApp = createAsyncThunk("app/init",
             mintAmount: initialState.mintAmount,
             mintTotalPrice: mintPrice,
             mintPrice: mintPrice,
-            pendingTokens: parseFloat(formatEther(pendingTokens)).toFixed(3),
-            guanoBalance: parseFloat(formatEther(guanoBalance)).toFixed(3),
-            showShare: false
         }
     }
 )
@@ -112,12 +97,12 @@ export const mint = createAsyncThunk("app/mint",
         const state = thunkApi.getState() as RootState
 
         try {
-            toast.loading('Minting Bat Pocong')
+            toast.loading('Minting BlerdPass')
             let priceTotal = state.app.mintAmount * 0.03
 
-            const batPocongContract = new ethers.Contract(contracts.BAT_POCONG!!, BatPocong.abi, params.provider.getSigner())
+            const blerdPassContract = new ethers.Contract(contracts.BLERD_PASS!!, BlerdPass.abi, params.provider.getSigner())
             let price = ethers.utils.parseUnits(priceTotal.toString(), 'ether');
-            let tx = await batPocongContract.mint(state.app.mintAmount, {value: price})
+            let tx = await blerdPassContract.mint(state.app.mintAmount, {value: price})
             await tx.wait()
         } catch (e) {
             console.log(e)
@@ -138,37 +123,7 @@ export const mint = createAsyncThunk("app/mint",
 
     })
 
-export const claimTokens = createAsyncThunk("app/claimTokens",
-    async (params: Web3Params, thunkApi) => {
-        const contracts = getAddresses(params.networkID);
-        const state = thunkApi.getState() as RootState
 
-        try {
-            toast.loading('Claiming GUANO')
-
-            const guanoContract = new ethers.Contract(contracts.GUANO!!, ERC20.abi, params.provider.getSigner())
-            let tx;
-            tx = await guanoContract.claimTokens()
-            await tx.wait()
-
-        } catch (e) {
-            console.log(e)
-            toast.dismiss()
-            toast.error('Claiming Failed')
-            return
-        }
-
-        await sleep(5);
-        await thunkApi.dispatch(loadApp({
-            address: params.address,
-            networkID: params.networkID,
-            provider: params.provider
-        }))
-
-        toast.dismiss()
-        toast.success('Claiming success')
-
-    })
 
 
 const appSlice = createSlice({
@@ -202,9 +157,7 @@ const appSlice = createSlice({
                 state.loading = false
                 console.log(error)
             })
-            .addCase(mint.fulfilled, state => {
-                state.showShare = true
-            })
+
     }
 })
 export const {mintAmountPlus, mintAmountMinus} = appSlice.actions
