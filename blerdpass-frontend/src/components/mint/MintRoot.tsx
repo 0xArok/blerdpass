@@ -45,7 +45,7 @@ function MintRoot() {
                 Welcome to BlerdPass Mint Central, each wallet is eligible to mint 1 BlerdPass Token. Mint price are free + gas fee.
             </Typography>
             <Typography variant={"h3"} color={"#fff"}>{app.currentMinted} /
-                3000 MINTED</Typography>
+                2222 MINTED</Typography>
             <Stack direction={"row"} spacing={2} alignItems="center">
                 <Fab size="small" aria-label="remove" onClick={mintMinus}
                      sx={{backgroundColor: Custom.vaderDarkPink}}>
