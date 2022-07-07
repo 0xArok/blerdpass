@@ -13,7 +13,9 @@ function AboutSection() {
     const {connected} = useWeb3Context();
 
     return (
-      <Box sx={{
+        <>
+            {/*
+            <Box sx={{
           overflow: "auto",
           objectFit: 'cover',
           backgroundImage: "url('/batcave.png')",
@@ -52,6 +54,9 @@ function AboutSection() {
           </Grid>
         </Grid>
       </Box>
+      */}
+        </>
+
     )
 
 }

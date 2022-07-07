@@ -24,7 +24,8 @@ function CollectionSection() {
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        {/*} <Stack id="Monsters" alignItems="center" spacing={3} paddingTop={10} paddingBottom={5} paddingX={2}
+        <>
+            {/*} <Stack id="Monsters" alignItems="center" spacing={3} paddingTop={10} paddingBottom={5} paddingX={2}
         sx={{
             overflow: "auto",
             objectFit: 'cover',
@@ -119,6 +120,8 @@ function CollectionSection() {
             </Swiper>
           </Container>
         </Stack>*/}
+        </>
+
     )
 
 }

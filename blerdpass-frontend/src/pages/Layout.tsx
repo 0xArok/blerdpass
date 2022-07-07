@@ -49,8 +49,8 @@ const Layout = ({children}: LayoutProps) => {
     return (
         <Box height="100vh" display="flex" flexDirection="column">
             <Head>
-                <title>Bat Pocong</title>
-                <meta name="" content="BatPocong"/>
+                <title>Blerd Pass</title>
+                <meta name="" content="BlerdPass"/>
                 <link rel="icon" href="/favicon.ico"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

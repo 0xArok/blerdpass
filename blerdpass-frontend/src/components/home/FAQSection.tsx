@@ -8,7 +8,8 @@ import DECO1 from "../../../public/deco1.png";
 function FAQSection() {
 
     return (
-        {/*<Stack paddingY={6}
+        <>
+            {/*<Stack paddingY={6}
                alignItems="center" id="FAQ">
             <Stack maxWidth={700} alignItems="center" spacing={3} paddingX={2}>
                 <Stack>
@@ -95,6 +96,8 @@ function FAQSection() {
 
 
         </Stack>*/}
+        </>
+
     )
 
 }
