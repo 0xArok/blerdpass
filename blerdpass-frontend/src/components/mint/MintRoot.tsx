@@ -41,10 +41,10 @@ function MintRoot() {
 
     return (
         <Stack alignItems="center" spacing={3}>
-            <Typography variant={"h5"} color="primary" width={"70vw"} textAlign={"center"}>
+            <Typography variant={"h5"} color={"#fff"} width={"70vw"} textAlign={"center"}>
                 Welcome to BlerdPass Mint Central, each wallet is eligible to mint 1 BlerdPass Token. Mint price are free + gas fee.
             </Typography>
-            <Typography variant={"h3"} color="primary">{app.currentMinted} /
+            <Typography variant={"h3"} color={"#fff"}>{app.currentMinted} /
                 3000 MINTED</Typography>
             <Stack direction={"row"} spacing={2} alignItems="center">
                 <Fab size="small" aria-label="remove" onClick={mintMinus}
@@ -71,7 +71,6 @@ function MintRoot() {
                     </Typography>
                 </Button>
             </Stack>
-
         </Stack>
     )
 

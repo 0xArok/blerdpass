@@ -56,6 +56,7 @@ const Layout = ({children}: LayoutProps) => {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link rel="stylesheet" href="/fonts/KeepCalm.css"/>
                 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet"/>
                 {/*<link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet" />*/}
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:site" content="@BatPocong"/>

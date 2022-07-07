@@ -37,23 +37,28 @@ export const theme = createTheme({
     typography: {
         h1: {
             fontSize: 42,
-            fontWeight: 200
+            fontWeight: 200,
+            fontFamily: 'Exo'
         },
         h2: {
             fontSize: 28,
-            fontWeight: 200
+            fontWeight: 200,
+            fontFamily: 'Exo'
         },
         h3: {
             fontSize: 22,
             fontWeight: 200,
+            fontFamily: 'Exo'
         },
         h4: {
             fontSize: 18,
-            fontWeight: 200
+            fontWeight: 200,
+            fontFamily: 'Exo'
         },
         h5: {
             fontSize: 14,
-            fontWeight: 200
+            fontWeight: 200,
+            fontFamily: 'Exo'
         },
         h6: {
             fontSize: 12,
@@ -61,7 +66,7 @@ export const theme = createTheme({
         },
         body1: {
             fontSize: 16,
-            fontFamily: 'Press Start 2P'
+            fontFamily: 'Exo'
         },
         body2: {
             fontSize: 12

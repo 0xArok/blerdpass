@@ -25,7 +25,7 @@ function HeadSection() {
 
             <Typography textAlign={"center"} variant={"h1"}
                         color={"#fff"} paddingBottom={4}
-                        sx={{textShadow: '3px 3px 3px #26a4fe'}}>
+                        sx={{textShadow: '3px 3px 3px #ed1f24'}}>
               MINT
             </Typography>
 
@@ -36,7 +36,7 @@ function HeadSection() {
           <Stack paddingBottom={12} spacing={2} alignItems={"center"}>
             <Typography textAlign={"center"} variant={"h1"}
                         color={"#fff"} paddingBottom={2}
-                        sx={{textShadow: '3px 3px 3px #ff00ba'}}>
+                        sx={{textShadow: '3px 3px 3px #ed1f24'}}>
               MINT
             </Typography>
 
