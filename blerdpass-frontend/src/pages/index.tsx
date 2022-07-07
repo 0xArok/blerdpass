@@ -14,13 +14,9 @@ import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
 
-    const share = useAppSelector((state) => state.app.showShare)
     const [open, setOpen] = useState(false);
 
 
-    useEffect(() => {
-        setOpen(share)
-    }, [share])
 
 
     // @ts-ignore
