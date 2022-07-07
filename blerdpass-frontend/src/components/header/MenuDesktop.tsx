@@ -4,16 +4,16 @@ import {Link as ScrollLink} from "react-scroll";
 
 export const frgMenuData = [
     {
-        href: "/",
-        tabContent: "Mint"
+        href: "https://blerdpass.io/",
+        tabContent: "Home"
     },
     {
-        href: "#collection",
-        tabContent: "collection"
+        href: "https://blerdpass.io/",
+        tabContent: "Roadmap"
     },
     {
-        href: "#teams",
-        tabContent: "teams"
+        href: "https://blerdpass.io/",
+        tabContent: "FAQS"
     }
 
 ]

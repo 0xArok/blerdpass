@@ -4,7 +4,7 @@ import {Box, color, styled} from "@mui/system";
 import MenuMobile from "./MenuMobile";
 import {useRouter} from "next/router";
 import ConnectButton from "./ConnectButton";
-import VADER from "../../../public/logo_title_01.png";
+import BLERDPASS from "../../../public/logo-blerd2.png";
 import Image from "next/image";
 
 export const DRAWER_WIDTH = 280;
@@ -34,10 +34,10 @@ function MenuBar(): JSX.Element {
         }}>
             <ToolbarStyle>
                 <Hidden mdDown>
-                    <Stack width={250} paddingLeft={6}>
-                        {/*<Stack height={60} width={120}>
-                            <Image src={VADER}/>
-                        </Stack>*/}
+                    <Stack width={250}>
+                        <Stack>
+                            <Image src={BLERDPASS}/>
+                        </Stack>
                     </Stack>
                 </Hidden>
                 <Container
