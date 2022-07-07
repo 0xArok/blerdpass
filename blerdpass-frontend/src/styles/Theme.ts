@@ -15,7 +15,7 @@ export const theme = createTheme({
     components: {
         MuiButton: {
             defaultProps: {
-                sx: {borderRadius: 0, borderColor: 'white', borderWidth: 2}
+                sx: {borderRadius: 0, borderColor: '#000', borderWidth: 1}
             }
         },
     },
@@ -75,7 +75,8 @@ export const theme = createTheme({
             fontSize: 10
         },
         button: {
-            fontSize: 12
+            fontSize: 12,
+            textTransform: 'inherit'
         }
     }
 });

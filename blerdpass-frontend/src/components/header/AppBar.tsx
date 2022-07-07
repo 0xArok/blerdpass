@@ -30,12 +30,12 @@ function MenuBar(): JSX.Element {
 
     return (
         <AppBar position="sticky" elevation={0} sx={{
-            justifyContent: "space-between", background: 'transparent'
+            justifyContent: "space-between", background: 'transparent', paddingTop: 1.5, paddingLeft: 7.5, paddingRight: 7.5
         }}>
             <ToolbarStyle>
                 <Hidden mdDown>
                     <Stack width={250}>
-                        <Stack>
+                        <Stack width={250}>
                             <Image src={BLERDPASS}/>
                         </Stack>
                     </Stack>

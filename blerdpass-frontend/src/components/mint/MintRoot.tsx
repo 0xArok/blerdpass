@@ -62,9 +62,11 @@ function MintRoot() {
             <Stack direction={"row"} spacing={2}>
                 <Button variant="contained" onClick={mintSale} color={"primary"}
                         sx={{
-                            borderRadius: 2,
+                            borderRadius: 1,
+                            borderColor: "#000",
                             height: 40,
-                            border: "solid"
+                            border: "solid",
+                            boxShadow: "-4px 4px 0px white",
                         }}>
                     <Typography color={"#fff"}>
                         Mint for {app.mintTotalPrice.toFixed(2)} ETH

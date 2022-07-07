@@ -35,7 +35,7 @@ function ConnectMenu() {
         <Button
             variant="contained"
             color={error ? 'error' : 'primary'}
-            sx={{borderRadius:2, borderColor: 'white', borderWidth: 2, height: 40, minWidth: 250, border: "solid" }}
+            sx={{borderRadius:2, borderColor: '#000', borderWidth: 2, height: 40, minWidth: 250, border: "solid", boxShadow: "-4px 4px 0px white",}}
             onClick={() => clickFunc()}>
             <Typography variant={"button"} noWrap>{buttonText}</Typography>
         </Button>
