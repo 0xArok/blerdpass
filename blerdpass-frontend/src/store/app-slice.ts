@@ -4,7 +4,7 @@ import {setAll} from "./utils/set-all";
 import {getAddresses} from "../web3/contractsAddresses";
 import {ethers} from "ethers";
 import {default as BatPocong} from '../abi/BatPocong.json';
-import {default as BlerdPass} from '../abi/ERC20.json';
+import {default as BlerdPass} from '../abi/BlerdPass.json';
 import {RootState} from "./store";
 import {toast} from "react-toastify";
 import {sleep} from "./utils/sleep";
