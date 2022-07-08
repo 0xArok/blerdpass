@@ -62,7 +62,13 @@ const Layout = ({children}: LayoutProps) => {
                 <meta name="twitter:site" content="@BlerdPass"/>
                 <meta name="twitter:title" content="BlerdPass"/>
                 <meta name="twitter:description"
-                      content="hmmmm"/>
+                      content="The year is 3240 and the city is rampant with crime and a notorious gang of
+                      ruffians wreak havoc using the subway system. City police don’t know what to do. Word
+                      on the street is that there may be more structure to these events than meets the eye.
+
+                            There are rumblings of a small group of citizens who are taking matters into their own hands.
+                            BlerdPass is the only way to catch a ride on the train and depending on your pass, it may or may not take
+                            you where you intended to go."/>
                 <meta name="twitter:image"
                       content=""/>
             </Head>
