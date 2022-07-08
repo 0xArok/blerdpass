@@ -75,7 +75,7 @@ export const theme = createTheme({
             fontSize: 10
         },
         button: {
-            fontSize: 12,
+            fontSize: 16,
             textTransform: 'inherit'
         }
     }
