@@ -1,7 +1,7 @@
 const switchRequest = () => {
     return window.ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{chainId: "4"}],
+        params: [{chainId: "1"}],
     });
 };
 

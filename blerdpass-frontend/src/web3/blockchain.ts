@@ -4,4 +4,4 @@ export enum Networks {
     ETH_TESTNET = 4,
 }
 
-export const DEFAULD_NETWORK = Networks.ETH_TESTNET;
+export const DEFAULD_NETWORK = Networks.MAINNET;
