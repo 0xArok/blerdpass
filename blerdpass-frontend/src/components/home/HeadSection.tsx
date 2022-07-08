@@ -18,7 +18,7 @@ function HeadSection() {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <Stack height={matches ? "90vh" : "80vh"} justifyContent={"center"} alignItems={"center"} justifyItems={"center"} sx={{backgroundColor: "#001051"}}>
+    <Stack height={matches ? "100vh" : "80vh"} justifyContent={"center"} alignItems={"center"} justifyItems={"center"} sx={{backgroundColor: "#001051"}}>
 
       {connected ?
           <Stack paddingBottom={12} marginTop={12} paddingTop={6}>
