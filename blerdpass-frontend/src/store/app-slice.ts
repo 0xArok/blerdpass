@@ -98,7 +98,7 @@ export const mint = createAsyncThunk("app/mint",
 
         try {
             toast.loading('Minting BlerdPass')
-            let priceTotal = state.app.mintAmount * 0.03
+            let priceTotal =  0
 
             const blerdPassContract = new ethers.Contract(contracts.BLERD_PASS!!, BlerdPass.abi, params.provider.getSigner())
             let price = ethers.utils.parseUnits(priceTotal.toString(), 'ether');

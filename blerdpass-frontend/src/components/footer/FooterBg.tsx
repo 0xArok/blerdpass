@@ -20,9 +20,12 @@ function Footer() {
                width={"100vw"}
                zIndex={10}
                paddingLeft={5} >
-            <Typography variant={"h2"} color={"#fff"}>
-                Terms and Condition
-            </Typography>
+            <a href={"https://blerdpass.io/terms-and-conditions/"}>
+                <Typography variant={"h4"} color={"#2ea3f2"}>
+                    Terms and Conditions
+                </Typography>
+            </a>
+
 
             <Stack direction={"row"} alignItems="center" justifyContent="center" spacing={1} paddingY={3}>
                 <a href={"https://twitter.com/kumaversenft"} target="_blank" rel="noreferrer">
