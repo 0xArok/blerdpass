@@ -48,13 +48,17 @@ function MintRoot() {
                 2222 MINTED</Typography>
             <Stack direction={"row"} spacing={2} alignItems="center">
                 <Fab size="small" aria-label="remove" onClick={mintMinus}
-                     sx={{backgroundColor: "#ed1f24"}}>
+                     sx={{backgroundColor: "#ed1f24", "&:hover": {
+                             backgroundColor: "#a2181c",
+                         }}}>
                     <RemoveIcon htmlColor={"#fff"}/>
                 </Fab>
 
                 <Typography variant={"h3"} color={"white"}>{app.mintAmount}</Typography>
 
-                <Fab size="small" aria-label="add" onClick={mintPlus} sx={{backgroundColor: "#ed1f24"}}>
+                <Fab size="small" aria-label="add" onClick={mintPlus} sx={{backgroundColor: "#ed1f24", "&:hover": {
+                        backgroundColor: "#a2181c",
+                    }}}>
                     <AddIcon htmlColor={"#fff"}/>
                 </Fab>
             </Stack>

@@ -28,10 +28,10 @@ function Footer() {
 
 
             <Stack direction={"row"} alignItems="center" justifyContent="center" spacing={1} paddingY={3}>
-                <a href={"https://twitter.com/kumaversenft"} target="_blank" rel="noreferrer">
+                <a href={"https://twitter.com/blerdconDC"} target="_blank" rel="noreferrer">
                     <Image src={twitter} alt="twitter" width={80} height={52}/>
                 </a>
-                <a href={"https://discord.gg/kumaverse"} target="_blank" rel="noreferrer">
+                <a href={"https://discord.gg/kzu7aU2gmH"} target="_blank" rel="noreferrer">
                     <Image src={discord} alt="discord" width={90} height={62}/>
                 </a>
 
